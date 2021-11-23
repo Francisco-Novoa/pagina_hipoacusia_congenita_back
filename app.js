@@ -11,8 +11,7 @@ const { unknownEndpoint } = require("./utils/unknownEndPoint");
 
 app.use(
   cors({
-    origin: "https://elegant-stonebraker-898f21.netlify.app/",
-    optionsSuccessStatus: 200,
+    origin: "https://elegant-stonebraker-898f21.netlify.app",
   })
 );
 
