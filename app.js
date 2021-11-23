@@ -9,27 +9,7 @@ const { requestLogger } = require("./utils/requestlogger");
 const { errorHandler } = require("./utils/errorHandler");
 const { unknownEndpoint } = require("./utils/unknownEndPoint");
 
-app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://elegant-stonebraker-898f21.netlify.app"
-  );
-  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Authorization, Content-Length, X-Requested-With"
-  );
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin,X-Requested-With,Content-Type,Accept,content-type,application/json"
-  );
-  // intercept OPTIONS method
-  if ("OPTIONS" == req.method) {
-    res.send(200);
-  } else {
-    next();
-  }
-});
+app.use(cors());
 
 app.use(express.json());
 
