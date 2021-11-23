@@ -7,6 +7,6 @@ const { TokenValidation } = require("../utils/tokenValidation");
 //login route
 MainRouter.use("/login", LoginRouter);
 MainRouter.use("/users", TokenValidation, UsersRouter);
-MainRouter.use("/subject", TokenValidation, SubjectRouter);
+MainRouter.use("/subject", SubjectRouter);
 
 module.exports = MainRouter;

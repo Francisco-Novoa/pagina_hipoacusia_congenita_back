@@ -1,8 +1,9 @@
 const Subject = require("../../models/subject");
+const { TokenValidation } = require("../utils/tokenValidation");
 
 const SubjectRouter = require("express").Router();
 
-SubjectRouter.post("/", async (req, res) => {
+SubjectRouter.post("/", TokenValidation, async (req, res) => {
   try {
     const newSubject = new Subject(req.body.subject);
     await newSubject.save();
