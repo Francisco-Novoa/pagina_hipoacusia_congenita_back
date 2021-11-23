@@ -15,7 +15,7 @@ SubjectRouter.post("/", TokenValidation, async (req, res) => {
 });
 
 SubjectRouter.get("/", async (req, res) => {
-  const subjects = await Subject.find();
+  const subjects = await Subject.find().sort({ subject: "asc" });
   res.status(200).json({ subjects });
 });
 
