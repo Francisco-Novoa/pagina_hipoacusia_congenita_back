@@ -9,7 +9,12 @@ const { requestLogger } = require("./utils/requestlogger");
 const { errorHandler } = require("./utils/errorHandler");
 const { unknownEndpoint } = require("./utils/unknownEndPoint");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://elegant-stonebraker-898f21.netlify.app/",
+    optionsSuccessStatus: 200,
+  })
+);
 
 app.use(express.json());
 
