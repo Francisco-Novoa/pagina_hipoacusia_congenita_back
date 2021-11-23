@@ -1,5 +1,5 @@
 const Subject = require("../../models/subject");
-const { TokenValidation } = require("../utils/tokenValidation");
+const { TokenValidation } = require("../../utils/tokenValidation");
 
 const SubjectRouter = require("express").Router();
 
