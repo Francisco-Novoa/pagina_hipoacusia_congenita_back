@@ -35,7 +35,7 @@ const subjectSchema = new Schema({
   comorbi_1: String,
   comorbi_2: String,
   alelo: String,
-  progesividad: String,
+  progresividad: String,
   aa_codon: String,
   haplotipo: String,
   gen_adic: String,
